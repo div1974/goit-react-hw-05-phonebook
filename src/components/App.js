@@ -39,7 +39,7 @@ export default class App extends Component {
     const nameChk = this.state.contacts.filter((e) => e.name === contact.name)
       .length;
 
-    if (!nameChk > 0) {
+    if (!(nameChk > 0)) {
       this.setState((prevState) => {
         return {
           contacts: [...prevState.contacts, contact],
